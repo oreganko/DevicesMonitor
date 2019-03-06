@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="330.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitorInterface.ModifyDevice">
+   <children>
+      <TextArea fx:id="note" layoutX="27.0" layoutY="229.0" onKeyTyped="#noteFill" prefHeight="72.0" prefWidth="264.0" />
+      <DatePicker fx:id="datePicker" layoutX="140.0" layoutY="170.0" onAction="#dateFill" />
+      <Label layoutX="27.0" layoutY="71.0" text="Model" />
+      <Label layoutX="29.0" layoutY="125.0" text="Adres" />
+      <Label layoutX="29.0" layoutY="174.0" text="Data uruchomienia" />
+      <Label layoutX="27.0" layoutY="212.0" text="Notka z instalacji" />
+      <Button fx:id="confirmation" defaultButton="true" layoutX="322.0" layoutY="229.0" mnemonicParsing="false" onAction="#getConfirmation" prefHeight="25.0" prefWidth="79.0" text="Zapisz" />
+      <Button fx:id="anulation" cancelButton="true" layoutX="322.0" layoutY="265.0" mnemonicParsing="false" onAction="#getAnulation" prefHeight="25.0" prefWidth="79.0" text="Anuluj" />
+      <ComboBox fx:id="model" editable="true" layoutX="140.0" layoutY="67.0" onAction="#modelFill" prefHeight="25.0" prefWidth="221.0" />
+      <ComboBox fx:id="address" editable="true" layoutX="140.0" layoutY="121.0" onAction="#addressFill" prefHeight="25.0" prefWidth="221.0" />
+      <Separator layoutX="30.0" layoutY="105.0" prefHeight="0.0" prefWidth="331.0" />
+      <Separator layoutX="30.0" layoutY="155.0" prefHeight="0.0" prefWidth="331.0" />
+      <Separator layoutX="30.0" layoutY="203.0" prefHeight="0.0" prefWidth="331.0" />
+      <Label layoutX="27.0" layoutY="24.0" text="Modyfikacja urządzenia">
+         <font>
+            <Font name="Courier New" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

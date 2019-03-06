@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitorInterface.ClientView">
+   <children>
+      <TableView fx:id="tableView" editable="true" layoutX="14.0" layoutY="106.0" onDragDone="#setTableViewClicked" onMouseClicked="#setTableViewClicked" onMouseDragExited="#setTableViewClicked" onMouseDragOver="#setTableViewClicked" prefHeight="132.0" prefWidth="644.0" AnchorPane.bottomAnchor="162.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="106.0">
+        <columns>
+          <TableColumn fx:id="model" prefWidth="82.0" text="Model" />
+          <TableColumn fx:id="address" prefWidth="209.0" text="Adres" />
+            <TableColumn fx:id="deviceNo" minWidth="0.0" prefWidth="137.0" text="Nr urządzenia" />
+            <TableColumn fx:id="instalDate" prefWidth="117.0" text="Data uruchomienia" />
+            <TableColumn fx:id="lastCheckUpDate" prefWidth="98.0" text="Ostatni przegląd" />
+        </columns>
+      </TableView>
+      <Label layoutX="11.0" layoutY="323.0" text="Notka z ostatniego przeglądu:" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="11.0" />
+      <TextArea fx:id="instalNote" editable="false" layoutX="14.0" layoutY="267.0" prefHeight="45.0" prefWidth="302.0" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="359.0" />
+      <TextArea fx:id="checkUpNote" editable="false" layoutX="14.0" layoutY="339.0" prefHeight="45.0" prefWidth="302.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="359.0" />
+      <Label layoutX="15.0" layoutY="250.0" text="Notka z instalacji:" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="15.0" />
+      <Label fx:id="name" layoutX="33.0" layoutY="34.0" text="Name" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="34.0">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="phone" layoutX="33.0" layoutY="70.0" text="Phone" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="70.0">
+         <font>
+            <Font name="Courier New" size="17.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="showDisabled" layoutX="482.0" layoutY="242.0" mnemonicParsing="false" onAction="#setShowDisabled" selected="true" text="Pokaż nieaktywne urządzenia" AnchorPane.bottomAnchor="141.0" AnchorPane.rightAnchor="17.0" />
+      <Button fx:id="showDetails" defaultButton="true" layoutX="529.0" layoutY="290.0" mnemonicParsing="false" onAction="#setShowDetails" text="Szczegóły urządzenia" AnchorPane.bottomAnchor="85.0" AnchorPane.rightAnchor="17.0" />
+      <Button fx:id="addNewInstallation" layoutX="529.0" layoutY="331.0" mnemonicParsing="false" onAction="#setAddNewInstallation" prefHeight="25.0" prefWidth="129.0" text="Dodaj urządzenie" AnchorPane.bottomAnchor="44.0" AnchorPane.rightAnchor="17.0" />
+      <Hyperlink fx:id="turnBack" layoutX="602.0" layoutY="362.0" onAction="#turnBack" text="Powrót" textFill="#170da1" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="27.0" />
+      <Button fx:id="deleteInstallation" layoutX="397.0" layoutY="331.0" mnemonicParsing="false" onAction="#setDeleteInstallation" text="Usuń urządzenie" AnchorPane.bottomAnchor="44.0" AnchorPane.rightAnchor="174.0" />
+   </children>
+</AnchorPane>

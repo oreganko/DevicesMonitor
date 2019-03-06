@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="395.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitorInterface.AddService">
+   <children>
+      <ChoiceBox fx:id="deviceNo" layoutX="158.0" layoutY="91.0" onDragDetected="#setAction" prefHeight="25.0" prefWidth="163.0" />
+      <DatePicker fx:id="datePicker" layoutX="158.0" layoutY="138.0" onAction="#setAction" />
+      <TextArea fx:id="note" layoutX="118.0" layoutY="240.0" onDragDetected="#setAction" prefHeight="85.0" prefWidth="203.0" />
+      <Label layoutX="30.0" layoutY="41.0" />
+      <Label layoutX="30.0" layoutY="33.0" text="Dodawanie przeglądu">
+         <font>
+            <Font name="Courier New" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="95.0" prefHeight="17.0" prefWidth="81.0" text="Nr urządzenia" />
+      <Label layoutX="30.0" layoutY="142.0" text="Data przeglądu" />
+      <Label layoutX="30.0" layoutY="240.0" text="Notatka" />
+      <Button fx:id="confirmation" defaultButton="true" layoutX="221.0" layoutY="350.0" mnemonicParsing="false" onAction="#setConfirmation" prefHeight="25.0" prefWidth="103.0" text="Potwierdź" />
+      <Button fx:id="anullation" cancelButton="true" layoutX="87.0" layoutY="350.0" mnemonicParsing="false" onAction="#setAnullation" prefHeight="25.0" prefWidth="103.0" text="Anuluj" />
+      <Separator layoutX="11.0" layoutY="125.0" prefHeight="5.0" prefWidth="313.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="125.0" />
+      <Separator layoutX="14.0" layoutY="175.0" prefHeight="5.0" prefWidth="313.0" />
+      <Separator layoutX="11.0" layoutY="336.0" prefHeight="5.0" prefWidth="313.0" />
+      <ChoiceBox fx:id="type" layoutX="158.0" layoutY="191.0" prefHeight="25.0" prefWidth="163.0" />
+      <Label layoutX="30.0" layoutY="195.0" prefHeight="17.0" prefWidth="81.0" text="Rodzaj" />
+      <Separator layoutX="14.0" layoutY="226.0" prefHeight="5.0" prefWidth="313.0" />
+   </children>
+</AnchorPane>

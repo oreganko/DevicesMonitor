@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitorInterface.MainMenu">
+   <center>
+       <AnchorPane minHeight="430.0" minWidth="543.0" prefHeight="430.0" prefWidth="543.0">
+            <children>
+               <Button fx:id="addService" layoutX="86.0" layoutY="265.0" mnemonicParsing="false" onAction="#setAddService" prefHeight="25.0" prefWidth="129.0" text="Dodaj przegląd" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="86.0" />
+               <Button fx:id="addInstallation" layoutX="86.0" layoutY="309.0" mnemonicParsing="false" onAction="#setAddInstallation" prefHeight="25.0" prefWidth="129.0" text="Dodaj instalację" AnchorPane.bottomAnchor="96.0" AnchorPane.leftAnchor="86.0" />
+                  <Button fx:id="servicesPerMonth" defaultButton="true" layoutX="85.0" layoutY="222.0" mnemonicParsing="false" onAction="#setServicesPerMonth" prefHeight="25.0" prefWidth="130.0" text="Przeglądy na miesiąc" AnchorPane.bottomAnchor="183.0" AnchorPane.leftAnchor="85.0" />
+               <ChoiceBox fx:id="viewChoice" layoutX="425.0" layoutY="222.0" prefWidth="150.0" AnchorPane.bottomAnchor="183.0" AnchorPane.rightAnchor="101.0" />
+            <AnchorPane fx:id="pane" cacheShape="false" layoutX="29.0" layoutY="62.0" prefHeight="160.0" prefWidth="483.0">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="160.0" fitWidth="486.0" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@hydrologo.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="64.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <opaqueInsets>
+            <Insets left="200.0" />
+         </opaqueInsets>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="74.0" BorderPane.alignment="CENTER">
+         <opaqueInsets>
+            <Insets right="200.0" />
+         </opaqueInsets>
+      </AnchorPane>
+   </right>
+</BorderPane>

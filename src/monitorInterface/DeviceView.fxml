@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="430.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitorInterface.DeviceView">
+   <children>
+      <Label fx:id="deviceNo" layoutX="14.0" layoutY="14.0" text="Numer urządzenia:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Courier New" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="model" layoutX="14.0" layoutY="42.0" text="Model" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="42.0">
+         <font>
+            <Font name="Courier New Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="address" layoutX="14.0" layoutY="75.0" text="Adres" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font name="Courier New" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="instalDate" layoutX="14.0" layoutY="102.0" text="Data uruchomienia:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="102.0">
+         <font>
+            <Font name="Courier New" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="name" layoutX="498.0" layoutY="15.0" text="Imię i Nazwisko" textAlignment="RIGHT" underline="true" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Courier New" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="14.0" layoutY="129.0" prefHeight="260.0" prefWidth="478.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="129.0">
+         <children>
+            <AnchorPane layoutX="250.0" layoutY="140.0" prefHeight="109.0" prefWidth="253.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="140.0">
+               <children>
+                  <Label layoutX="34.0" prefHeight="16.0" prefWidth="219.0" text="Notka z zaznaczonego przeglądu:" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="0.0" />
+                  <TextArea fx:id="serviceNote" editable="false" layoutX="34.0" layoutY="17.0" prefHeight="85.0" prefWidth="185.0" promptText="Notka z przeglądu" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="17.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="284.0" layoutY="31.0" prefHeight="102.0" prefWidth="219.0" AnchorPane.bottomAnchor="127.0" AnchorPane.leftAnchor="284.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="31.0">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="93.0" text="Notka z instalacji:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TextArea fx:id="instalNote" editable="false" layoutX="-28.0" layoutY="17.0" prefHeight="85.0" prefWidth="219.0" promptText="Notka z instalacji" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="17.0" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="services" onMouseClicked="#setServicesClicked" onMouseDragEntered="#setServicesClicked" prefHeight="257.0" prefWidth="121.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="dates" prefWidth="120.0" text="Data przeglądu" />
+              </columns>
+            </TableView>
+            <TableView fx:id="services1" layoutX="147.0" layoutY="1.0" onMouseClicked="#setFixesClicked" onMouseDragEntered="#setFixesClicked" prefHeight="257.0" prefWidth="121.0" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="fixes" prefWidth="120.0" text="Naprawy" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="phone" layoutX="592.0" layoutY="53.0" text="Telefon" textAlignment="RIGHT" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="53.0">
+         <font>
+            <Font name="Courier New" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="serviceActuality" layoutX="570.0" layoutY="85.0" text="Przegląd: " AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font name="Courier New Bold" size="15.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="isEnabled" layoutX="489.0" layoutY="110.0" mnemonicParsing="false" onAction="#setIsEnabledClick" selected="true" text="Urządzenie aktywne" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="110.0">
+         <font>
+            <Font name="Courier New" size="14.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="addService" defaultButton="true" layoutX="556.0" layoutY="215.0" mnemonicParsing="false" onAction="#setAddService" prefHeight="25.0" prefWidth="110.0" text="Dodaj przegląd" AnchorPane.bottomAnchor="190.0" AnchorPane.rightAnchor="37.0" />
+      <Button fx:id="editDevice" layoutX="528.0" layoutY="294.0" mnemonicParsing="false" onAction="#setEditDevice" text="Edytuj urządzenie" AnchorPane.bottomAnchor="110.0" AnchorPane.rightAnchor="37.0" />
+      <Button fx:id="editService" layoutX="528.0" layoutY="257.0" mnemonicParsing="false" onAction="#setEditService" prefHeight="25.0" prefWidth="110.0" text="Edytuj przegląd" AnchorPane.bottomAnchor="150.0" AnchorPane.rightAnchor="37.0" />
+      <Hyperlink fx:id="turnToPrevious" layoutX="528.0" layoutY="371.0" onAction="#setTurnToPrevious" text="Powrót" textFill="#3721a4" AnchorPane.bottomAnchor="36.0" AnchorPane.rightAnchor="37.0" />
+      <Button fx:id="deleteService" layoutX="528.0" layoutY="334.0" mnemonicParsing="false" onAction="#setDeleteService" prefHeight="25.0" prefWidth="110.0" text="Usuń przegląd" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="37.0" />
+   </children>
+</AnchorPane>
